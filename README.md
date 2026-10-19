@@ -20,7 +20,7 @@
 </p> -->
 
 <p align="center">
-    <img src="./fig/arc.png" style="border-radius: 15px"><br>
+    <img src="./figs/framework.pdf" style="border-radius: 15px"><br>
 </p>
 
 ## :book: Table Of Contents
