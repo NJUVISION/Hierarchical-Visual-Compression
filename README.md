@@ -45,6 +45,7 @@
     <img src="./figs/visual.png" style="border-radius: 15px"><br>
 </p>
 
+<!--
 ## <a name="train"></a>⏳ Train
 
 **Note:** The numbers in the yaml filenames (e.g., `1_1_1`) represent $\lambda_{\text{diffusion}}$, $\lambda_{\text{mse}}$, and $\lambda_{\text{bpp}}$ respectively.
@@ -70,7 +71,7 @@
    ```
    bash stage2.py 
    ```
-
+-->
 ## <a name="inference"></a>😀 Inference
  
 1. Download the pre-trained models (We provide 3 low-bitrate models for testing, and other bitrate models can be trained by referring to the training method):
