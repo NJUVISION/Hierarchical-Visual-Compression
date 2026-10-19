@@ -20,7 +20,7 @@
 </p> -->
 
 <p align="center">
-    <img src="./figs/framework.pdf" style="border-radius: 15px"><br>
+    <img src="./figs/framework.png" style="border-radius: 15px"><br>
 </p>
 
 ## :book: Table Of Contents
@@ -42,7 +42,7 @@
 
 ## <a name="Visual Results"></a>✨ Visual Results
 <p align="center">
-    <img src="./fig/visual.png" style="border-radius: 15px"><br>
+    <img src="./figs/visual.png" style="border-radius: 15px"><br>
 </p>
 
 ## <a name="train"></a>⏳ Train
