@@ -13,12 +13,11 @@
   Nanjing University
 </p>
 
-<!--
-<p align="center">
-  <a href="PROJECT_URL">🌐 Project Page</a> &ensp;
-  <a href="PAPER_URL">📃 Paper</a>
+
+<p align="left">
+  <strong>We propose a VAR-based framework for ultra-low-rate progressive image compression with enhanced semantic preservation and reconstruction quality.</strong>
 </p>
--->
+
 
 <p align="center">
   <img src="./figs/framework.png" width="100%" alt="Overview of the proposed framework">
@@ -26,6 +25,26 @@
 
 ## 📢 News
 - **2026.10.14** — Our paper has been accepted by **IEEE JETCAS**!
+
+
+## 📊 Quantitative Results
+
+We evaluate our method on DIV2K and CLIC in terms of LPIPS, DISTS, FID, CLIP-Sem, and DINO-Sem across different bitrates.
+
+<p align="center">
+  <img src="./figs/rd.png" width="100%" alt="Quantitative results on DIV2K and CLIC">
+</p>
+
+## 🖼️ Visual Comparisons
+
+Visual comparisons at extremely low bitrates. Our method preserves plausible visual structures and semantic content at compression ratios up to 76,000×.
+
+<p align="center">
+  <img src="./figs/visual.png" width="100%" alt="Visual comparisons at ultra-low bitrates">
+</p>
+
+
+
 
 ## 🌊 TODO
 - [x] Release quantitative results
