@@ -1,6 +1,8 @@
 
 <h1 align="center">Hierarchical Visual Description Learning for Ultra-low Rate Progressive Image Compression</h1>
-
+<p align="center">
+  <a href="https://ieeexplore.ieee.org/document/11749545">📄 Paper (IEEE Xplore)</a>
+</p>
 <p align="center">
   Hanfei&nbsp;Li &ensp; <b>&middot;</b> &ensp;
   Anle&nbsp;Ke &ensp; <b>&middot;</b> &ensp;
@@ -24,6 +26,7 @@
 </p>
 
 ## 📢 News
+- **2026.10.25** — Our paper is now available on [IEEE Xplore](https://ieeexplore.ieee.org/document/11749545) (Early Access)!
 - **2026.10.14** — Our paper has been accepted by **IEEE JETCAS**!
 
 
@@ -141,6 +144,7 @@ If you find our work useful, please consider citing:
     title   = {Hierarchical Visual Description Learning for Ultra-low Rate Progressive Image Compression},
     journal = {IEEE Journal on Emerging and Selected Topics in Circuits and Systems},
     year    = {2026},
-    note    = {Accepted for publication}
+    doi     = {10.1109/JETCAS.2026.3746235},
+    url     = {https://doi.org/10.1109/JETCAS.2026.3746235}
 }
 ```
