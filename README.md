@@ -43,7 +43,87 @@ Visual comparisons at extremely low bitrates. Our method preserves plausible vis
   <img src="./figs/visual.png" width="100%" alt="Visual comparisons at ultra-low bitrates">
 </p>
 
+## 🚀 Inference and Evaluation
 
+### Pretrained Models
+
+Our pretrained checkpoints are available on [ModelScope](https://modelscope.cn/models/LiHanfei/Hierarchical-Visual-Compression/files).
+
+The following models are required for inference:
+
+| Model | Checkpoint | Source |
+|---|---|---|
+| Stage-1 BSQ-VAE | `stage1_bsqvae.ckpt` | ModelScope |
+| Stage-2 Infinity-2B | `stage2_infinity.pth` | ModelScope |
+| Flan-T5-XL | `google/flan-t5-xl` | Hugging Face |
+
+Download our checkpoints using ModelScope:
+
+```bash
+pip install modelscope
+
+modelscope download \
+    --model LiHanfei/Hierarchical-Visual-Compression \
+    stage1_bsqvae.ckpt stage2_infinity.pth \
+    --local_dir ./checkpoints
+```
+
+Download Flan-T5-XL separately:
+
+```bash
+hf download google/flan-t5-xl \
+    --local-dir ./checkpoints/flan-t5-xl
+```
+
+### Environment Setup
+
+Our inference environment is based on Python 3.10.19, PyTorch 2.8.0, and CUDA 12.8. Experiments were conducted on NVIDIA A100 GPUs.
+
+```bash
+conda create -n hvc python=3.10 -y
+conda activate hvc
+
+pip install torch==2.8.0 torchvision==0.23.0 \
+    --index-url https://download.pytorch.org/whl/cu128
+
+pip install -r requirements.txt
+```
+
+### Dataset Preparation
+
+Download the DIV2K validation dataset and specify its local image directory using `--image-root`.
+
+The provided `dataset/DIV2K.jsonl` contains image filenames and their corresponding text captions.
+
+### Inference
+
+Run inference and evaluate BPP, LPIPS, and DISTS on one image:
+
+```bash
+python eval_div2k_adaptive_5metrics.py \
+    --vae-ckpt ./checkpoints/stage1_bsqvae.ckpt \
+    --infinity-ckpt ./checkpoints/stage2_infinity.pth \
+    --t5-path ./checkpoints/flan-t5-xl \
+    --dataset-jsonl ./dataset/DIV2K.jsonl \
+    --image-root /path/to/DIV2K/images \
+    --output-dir ./results/DIV2K \
+    --pn 1M \
+    --max-images 1
+```
+
+Set `--max-images 0` to evaluate the entire dataset.
+
+The script performs progressive compression and reconstruction across 13 scales and reports the corresponding bitrate and perceptual quality.
+
+Evaluation metrics:
+
+- **BPP:** Total bitrate, including visual tokens and encoded text information.
+- **LPIPS:** AlexNet-based learned perceptual distance.
+- **DISTS:** Deep Image Structure and Texture Similarity.
+
+LPIPS and DISTS use pretrained evaluation networks. Their backbone weights may be downloaded automatically on first use; internet access or pre-cached weights are required.
+
+The reconstructed images and evaluation results are saved under the specified output directory.
 
 
 ## 🌊 TODO
