@@ -120,8 +120,8 @@ The reconstructed images and evaluation results are saved under the specified ou
 
 ## 🌊 TODO
 - [x] Release quantitative results
-- [ ] Release inference code
-- [ ] Release pretrained models
+- [x] Release inference code
+- [x] Release pretrained models
 - [ ] Release training code
 
 ## ❤ Acknowledgement
