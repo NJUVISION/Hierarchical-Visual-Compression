@@ -218,3 +218,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Checkpoints
+checkpoints/
+*.pth
+*.ckpt
+*.pt
+*.safetensors
+
+# Evaluation outputs
+results/
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
