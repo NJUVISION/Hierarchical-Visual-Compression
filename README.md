@@ -115,14 +115,6 @@ Set `--max-images 0` to evaluate the entire dataset.
 
 The script performs progressive compression and reconstruction across 13 scales and reports the corresponding bitrate and perceptual quality.
 
-Evaluation metrics:
-
-- **BPP:** Total bitrate, including visual tokens and encoded text information.
-- **LPIPS:** AlexNet-based learned perceptual distance.
-- **DISTS:** Deep Image Structure and Texture Similarity.
-
-LPIPS and DISTS use pretrained evaluation networks. Their backbone weights may be downloaded automatically on first use; internet access or pre-cached weights are required.
-
 The reconstructed images and evaluation results are saved under the specified output directory.
 
 
