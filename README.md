@@ -87,13 +87,16 @@ pip install torch==2.8.0 torchvision==0.23.0 \
     --index-url https://download.pytorch.org/whl/cu128
 
 pip install -r requirements.txt
+pip install flash-attn==2.8.2 --no-build-isolation
 ```
 
 ### Dataset Preparation
 
-Download the DIV2K validation dataset and specify its local image directory using `--image-root`.
+We evaluate our method on DIV2K and CLIC. All images are preprocessed to **1024 × 1024** by resizing the shorter side to 1024 while preserving the aspect ratio, followed by a center crop.
 
-The provided `dataset/DIV2K.jsonl` contains image filenames and their corresponding text captions.
+Image captions are generated using **BLIP-2**. We provide `dataset/DIV2K.jsonl` and `dataset/CLIC.jsonl`, containing image filenames and their corresponding captions.
+
+Please specify the directory of preprocessed images using `--image-root`.
 
 ### Inference
 
