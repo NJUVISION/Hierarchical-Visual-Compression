@@ -100,7 +100,7 @@ The provided `dataset/DIV2K.jsonl` contains image filenames and their correspond
 Run inference and evaluate BPP, LPIPS, and DISTS on one image:
 
 ```bash
-python eval_div2k_adaptive_5metrics.py \
+python eval.py \
     --vae-ckpt ./checkpoints/stage1_bsqvae.ckpt \
     --infinity-ckpt ./checkpoints/stage2_infinity.pth \
     --t5-path ./checkpoints/flan-t5-xl \
