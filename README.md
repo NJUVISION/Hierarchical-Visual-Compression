@@ -161,13 +161,6 @@ bash train_var_flip_prefix.sh
 ```
 
 
-
-## 🌊 TODO
-- [x] Release quantitative results
-- [x] Release inference code
-- [x] Release pretrained models
-- [ ] Release training code
-
 ## ❤ Acknowledgement
 
 This work builds upon [Infinity](https://github.com/FoundationVision/Infinity). We thank the authors for their valuable contributions.
