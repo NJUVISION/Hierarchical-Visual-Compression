@@ -127,8 +127,8 @@ The reconstructed images and evaluation results are saved under the specified ou
 
 Our training pipeline consists of two stages:
 
-- **Stage 1 – BSQ-VAE Training:** 
-- **Stage 2 – Infinity Training:** 
+- **Stage 1 – BSQ-VAE Training** 
+- **Stage 2 – Infinity Training** 
 
 ### Pretrained Weights
 
