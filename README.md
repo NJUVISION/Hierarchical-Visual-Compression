@@ -123,6 +123,44 @@ The script performs progressive compression and reconstruction across 13 scales 
 
 The reconstructed images and evaluation results are saved under the specified output directory.
 
+## 🏋️ Training
+
+Our training pipeline consists of two stages:
+
+- **Stage 1 – BSQ-VAE Training:** 
+- **Stage 2 – Infinity Training:** 
+
+### Pretrained Weights
+
+The pretrained VAE and Infinity initialization checkpoints are obtained from the official [Infinity repository](https://github.com/FoundationVision/Infinity). The Stage-1 trained VAE checkpoint is subsequently used to initialize Stage 2.
+
+### Training Data
+
+Both stages use preprocessed `proc_memmap` datasets. Please prepare the training and validation data and configure their local paths before training.
+
+### Run Training
+
+**Stage 1:**
+
+```bash
+export PROC_DIR=/path/to/train_memmap
+export PROC_VAL_DIR=/path/to/val_memmap
+export PRETRAINED_CKPT=/path/to/infinity_vae_pretrained.pth
+
+bash train_stage1.sh
+```
+
+**Stage 2:**
+
+```bash
+export PROC_DATA_PATH=/path/to/train_memmap
+export VAE_CKPT=/path/to/stage1_trained.ckpt
+export INFINITY_INIT_CKPT=/path/to/infinity_pretrained.pth
+
+bash train_var_flip_prefix.sh
+```
+
+
 
 ## 🌊 TODO
 - [x] Release quantitative results
