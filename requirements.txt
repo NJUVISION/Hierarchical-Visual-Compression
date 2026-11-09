@@ -23,3 +23,17 @@ imageio
 packaging==25.0
 ninja==1.13.0
 psutil==7.2.2
+# Training dependencies
+torch==2.8.0
+torchvision==0.23.0
+einx==0.4.3
+flash-attn==2.8.2
+typed-argument-parser==1.12.0
+colorama==0.4.6
+swanlab==0.7.15
+matplotlib==3.10.7
+seaborn==0.13.2
+scikit-video==1.1.11
+requests==2.32.5
+packaging==25.0
+ninja==1.13.0
